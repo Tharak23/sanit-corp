@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 17, 17, 17;
+  --background-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 17, 17, 17;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: 'Inter', sans-serif;
+  background-image: url('/grid-pattern.svg'), url('/paper-texture.svg');
+  background-repeat: repeat, repeat;
+  background-attachment: fixed;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: #111827;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* OpenNote-inspired components */
+@layer components {
+  .card {
+    @apply bg-white p-8 rounded-lg border border-grid/50 shadow-card hover:shadow-hand-drawn transition-all duration-300 hover:-translate-y-1;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-mono font-bold text-accent mb-6 tracking-tight;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-gray-600 max-w-3xl mx-auto mb-12 font-light;
+  }
+  
+  .hand-drawn-border {
+    @apply border-2 border-dashed border-primary rounded-lg;
+  }
+  
+  .paper-bg {
+    @apply bg-background-alt;
+  }
+  
+  .highlight {
+    @apply relative inline-block;
+  }
+  
+  .highlight::after {
+    @apply content-[''] absolute left-0 right-0 bottom-0 h-3 bg-primary/20 -z-10 -rotate-1;
+  }
+}
+
+.mint-gradient {
+  background: linear-gradient(135deg, #A4D4C6 0%, #87C2B5 100%);
+}
+
+.hover-lift {
+  transition: transform 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+.hand-drawn-box {
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hand-drawn-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+.hand-drawn-box::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid #6ECEB2;
+  border-radius: 10px;
+  z-index: -1;
+  transform: rotate(-0.5deg);
+}
