@@ -15,17 +15,17 @@ type ButtonProps = {
 };
 
 const variantClasses = {
-  primary: 'bg-primary text-white hover:bg-primary-dark shadow-hand-drawn font-medium',
-  secondary: 'bg-accent text-white hover:bg-accent/90 shadow-hand-drawn font-medium',
-  outline: 'bg-white text-accent border-2 border-dashed border-primary hover:bg-primary/5 font-medium',
+  primary: 'bg-primary text-white hover:bg-primary-dark',
+  secondary: 'bg-secondary text-white hover:bg-secondary-dark',
+  outline: 'bg-transparent border border-primary text-primary hover:bg-primary/10',
   text: 'bg-transparent text-primary hover:text-primary-dark hover:underline font-medium',
   'hand-drawn': 'bg-white text-accent border-2 border-primary hover:bg-primary/10 hand-drawn-box font-medium',
 };
 
 const sizeClasses = {
   sm: 'text-xs px-3 py-1.5',
-  md: 'text-sm px-4 py-2 font-mono',
-  lg: 'text-base px-6 py-3 font-mono',
+  md: 'text-sm px-4 py-2',
+  lg: 'text-base px-6 py-3',
 };
 
 export default function Button({
@@ -45,7 +45,7 @@ export default function Button({
         <Image src="/paper-airplane.svg" alt="" width={20} height={20} className="inline" />
       )}
       {icon === 'arrow-right' && (
-        <Image src="/arrow-right.svg" alt="" width={20} height={20} className="inline" />
+        <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="inline"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" /></svg>
       )}
     </span>
   ) : null;

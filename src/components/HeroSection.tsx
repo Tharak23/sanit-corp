@@ -2,7 +2,6 @@
 
 import { Code, Server, Cpu } from 'lucide-react';
 import Button from './Button';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function HeroSection() {

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import Button from '@/components/Button';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const categories = [
   { id: 'all', name: 'All Projects' },
@@ -162,10 +163,12 @@ export default function PortfolioPage() {
               whileHover={{ y: -5 }}
             >
               <div className="relative h-48 sm:h-64 bg-gray-100">
-                <img 
+                <Image 
                   src={project.image} 
                   alt={project.title} 
                   className="h-full w-full object-cover"
+                  width={600}
+                  height={400}
                 />
                 <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-xs font-medium text-gray-600">
                   {categories.find(cat => cat.id === project.category)?.name}
@@ -195,7 +198,7 @@ export default function PortfolioPage() {
                   
                   {project.quote && (
                     <div className="border-l-2 border-primary pl-4 mt-6 italic text-gray-600">
-                      <p className="text-sm">"{project.quote.text}"</p>
+                      <p className="text-sm">{`"${project.quote.text}"`}</p>
                       <p className="text-xs font-medium mt-2 text-gray-500">— {project.quote.author}</p>
                     </div>
                   )}
@@ -222,9 +225,9 @@ export default function PortfolioPage() {
         )}
         
         <div className="mt-24 text-center">
-          <h2 className="text-3xl font-mono font-bold text-accent">Ready to Build Something Amazing?</h2>
+          <h2 className="text-3xl font-mono font-bold text-accent">{"Ready to Build Something Amazing?"}</h2>
           <p className="mt-6 text-lg text-gray-600">
-            Let's discuss how we can help you create the next success story in our portfolio.
+            {"Let's discuss how we can help you create the next success story in our portfolio."}
           </p>
           <div className="mt-10">
             <Button href="/contact" size="lg">

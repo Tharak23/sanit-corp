@@ -3,6 +3,7 @@
 import { Briefcase, Clock, MapPin, CreditCard, Award, Book, Coffee, Laptop } from 'lucide-react';
 import Button from '@/components/Button';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const jobs = [
   {
@@ -173,7 +174,7 @@ export default function CareersPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 + (index * 0.1) }}
               >
-                <img src={image} alt={`Life at SAN IT ${index + 1}`} className="h-64 w-full object-cover" />
+                <Image src={image} alt={`Life at SAN IT ${index + 1}`} className="h-64 w-full object-cover" width={600} height={400} />
               </motion.div>
             ))}
           </div>
@@ -290,7 +291,7 @@ export default function CareersPage() {
           </div>
           
           <div className="mt-16 text-center">
-            <h3 className="text-xl font-mono font-bold text-accent">Don't see a role that fits?</h3>
+            <h3 className="text-xl font-mono font-bold text-accent">{"Don't see a role that fits?"}</h3>
             <p className="mt-4 text-gray-600">
               {"We're always looking for talented individuals to join our team. Send us your resume and we'll keep it on file for future opportunities."}
             </p>

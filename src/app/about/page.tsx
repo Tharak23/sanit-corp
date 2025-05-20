@@ -3,6 +3,7 @@
 import { Code, Server, Database, GitBranch, Laptop, Layers } from 'lucide-react';
 import Button from '@/components/Button';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const team = [
   {
@@ -151,7 +152,7 @@ export default function AboutPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 + (index * 0.1) }}
               >
-                <img className="aspect-square w-full rounded-2xl object-cover" src={person.image} alt={person.name} />
+                <Image className="aspect-square w-full rounded-2xl object-cover" src={person.image} alt={person.name} width={400} height={400} />
                 <h3 className="mt-6 text-lg font-mono font-bold leading-8 tracking-tight text-accent">{person.name}</h3>
                 <p className="text-base leading-7 text-primary">{person.role}</p>
                 <p className="mt-4 text-base leading-7 text-gray-600">{person.bio}</p>
@@ -260,7 +261,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-mono font-bold tracking-tight text-accent">Join Our Team</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              We're always looking for talented individuals who share our values and passion for technology.
+              {"We're always looking for talented individuals who share our values and passion for technology."}
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Button href="/careers" size="lg">

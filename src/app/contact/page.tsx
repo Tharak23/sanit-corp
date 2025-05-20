@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
-import Button from '@/components/Button';
 import { motion } from 'framer-motion';
 
 export default function ContactPage() {
@@ -47,9 +46,9 @@ export default function ContactPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <h1 className="text-4xl font-mono font-bold tracking-tight text-accent">Let's Talk Tech.</h1>
+                <h1 className="text-4xl font-mono font-bold tracking-tight text-accent">{"Let's Talk Tech."}</h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                  {"Ready to transform your business with technology? We're here to help you build scalable solutions that grow with your vision."}
+                  Ready to transform your business with technology? {"We're here to help you build scalable solutions that grow with your vision."}
                 </p>
                 <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
                   <div className="flex gap-x-4">
@@ -191,14 +190,14 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div className="ml-3">
-                      <p className="text-sm font-medium text-green-800">Message sent successfully! We'll be in touch soon.</p>
+                      <p className="text-sm font-medium text-green-800">{"Message sent successfully! We'll be in touch soon."}</p>
                     </div>
                   </div>
                 </div>
               )}
               
               <p className="mt-4 text-sm text-gray-500">
-                We'll respond to your message within 1-2 business days.
+                {"We'll respond to your message within 1-2 business days."}
               </p>
             </div>
           </motion.form>
