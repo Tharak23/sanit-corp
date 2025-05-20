@@ -111,7 +111,7 @@ export default function PortfolioPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            What We've Built
+            {"What We've Built"}
           </motion.h1>
           <motion.p
             className="mt-6 text-lg leading-8 text-gray-600"

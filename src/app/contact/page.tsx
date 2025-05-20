@@ -49,7 +49,7 @@ export default function ContactPage() {
               >
                 <h1 className="text-4xl font-mono font-bold tracking-tight text-accent">Let's Talk Tech.</h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                  Ready to transform your business with technology? We're here to help you build scalable solutions that grow with your vision.
+                  {"Ready to transform your business with technology? We're here to help you build scalable solutions that grow with your vision."}
                 </p>
                 <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
                   <div className="flex gap-x-4">

@@ -147,7 +147,7 @@ export default function CareersPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                We're looking for passionate people to help us build the next generation of technology solutions.
+                {"We're looking for passionate people to help us build the next generation of technology solutions."}
               </motion.p>
             </div>
           </div>
@@ -160,7 +160,7 @@ export default function CareersPage() {
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-mono font-bold tracking-tight text-accent">Life at SAN IT</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              We've built a culture where creativity, problem-solving, and innovation thrive.
+              {"We've built a culture where creativity, problem-solving, and innovation thrive."}
             </p>
           </div>
           
@@ -292,7 +292,7 @@ export default function CareersPage() {
           <div className="mt-16 text-center">
             <h3 className="text-xl font-mono font-bold text-accent">Don't see a role that fits?</h3>
             <p className="mt-4 text-gray-600">
-              We're always looking for talented individuals to join our team. Send us your resume and we'll keep it on file for future opportunities.
+              {"We're always looking for talented individuals to join our team. Send us your resume and we'll keep it on file for future opportunities."}
             </p>
             <div className="mt-6">
               <Button href="mailto:careers@sanit.com" variant="outline">

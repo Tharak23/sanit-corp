@@ -97,7 +97,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="section-title">Everything Your Tech Stack Needs</h2>
             <p className="section-subtitle">
-              From start to scale, we build systems that support your business at every stage of growth.
+              {"From start to scale, we build systems that support your business at every stage of growth."}
             </p>
           </div>
           
@@ -146,7 +146,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center p-10 bg-white rounded-lg hand-drawn-border">
             <h2 className="section-title">Ready to Transform Your Tech?</h2>
             <p className="mt-4 text-xl text-dark-gray">
-              Let's discuss how we can help you build systems that grow with your business.
+              {"Let's discuss how we can help you build systems that grow with your business."}
             </p>
             <div className="mt-10">
               <Button href="/contact" size="lg" icon="paper-airplane">

@@ -157,7 +157,7 @@ export default function ServicesPage() {
               Ready to Build Something Great?
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Let's discuss how we can help you build systems that grow with your business.
+              {"Let's discuss how we can help you build systems that grow with your business."}
             </p>
             <div className="mt-10 flex items-center justify-center gap-6">
               <Button href="/contact" size="lg">
